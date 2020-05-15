@@ -38,9 +38,7 @@
 
 				<video class="fillWidth" :style="fixStyle " autoplay loop muted  v-on:canplay="canPlay">
 					<source src="
-
 https://stream.mux.com/lcGm59E00q5uzDUiDP5WHgPvZQVVw02BB3/high.mp4?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InQ5UHZucm9ZY0hQNjhYSmlRQnRHTEVVSkVSSXJ0UXhKIn0.eyJleHAiOjE1ODk1OTI5NjAsImF1ZCI6InYiLCJzdWIiOiJsY0dtNTlFMDBxNXV6RFVpRFA1V0hnUHZaUVZWdzAyQkIzIn0.uWBmYhGgOMPUYz-5XfNHcOuPIJl1kTTGYZgNmtN4mJyjELvSdwEOo0_LH9xGGCvJJ_yL-GHFCYJYoPoUVLhYQpwyir0mY-RcXFy2oqlCIEZm8XwR8ICi9uwSTMeBR-O7u0NWWnyOJIiqmnV7mNQdXtdW8G5zlWCjJpLLAyKV83uHUaSEiuu7tT7kdUQhcvg0ITtMONQ9ZvH8EyCSz4ZHua3emRhcHKichRj7d146ryxyHKnIGYEmEQZrT6OiUUpwsU8bY5OuZIH9u4oAhLZtVecJvAf08JONMFNvdy3nz5gYK5ST-pB3gmYR8VdBXg54qaK923gawNFa23Ah9821ag
-
 " type="video/mp4"/>
 				</video>
 
@@ -166,7 +164,7 @@ https://stream.mux.com/lcGm59E00q5uzDUiDP5WHgPvZQVVw02BB3/high.mp4?token=eyJhbGc
 		justify-content: center;
 		z-index: 50;
 		align-items: center;
-		font-family: "Century Schoolbook";
+		font-family: "Arial";
 		margin-block-start: 25%;
 		margin-block-end: 45%;
 		margin-inline-start: 35%;
