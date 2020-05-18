@@ -3,7 +3,7 @@
 </style>
 <style>
 	.el-header-1, .el-footer-1,{
-		background-color : #B3C0D1;
+		background-color : #409dfe;
 		color: #333;
 		text-align: center;
 		line-height: normal;
@@ -19,11 +19,15 @@
 	}
 
 </style>
+
+
+
 <template>
+
 	<el-container class="container">
 	<!--<el-container style="height: 500px; border: 1px solid #eee">-->
-		<el-header style="text-align: right; font-size: 12px">
-			<v-header title="首页">
+		<el-header style="text-align: right; font-size: 18px">
+			<v-header  title="首页" style="background: #409dfe">
 				<router-link slot="left" to="/index">首页</router-link>
 				<router-link slot="right" to="/signout">退出</router-link>
 			</v-header>
@@ -33,7 +37,7 @@
 		</el-header>
 
 		<el-container class="el-aside-1">
-			<el-aside class="el-aside-1" style="background-color: rgb(143,214,198)">
+			<el-aside class="el-aside-1" style="background-color: rgb(75,218,255)">
 				<el-menu :default-openeds="['1']"  class="el-aside-1">
 					<el-submenu index="1">
 						<template slot="title"><i class="el-icon-message"></i>导航一</template>
@@ -92,95 +96,256 @@
 					<!--<i class="el-icon-setting" style="margin-right: 30px"></i>-->
 					<el-button  type="primary" icon="el-icon-setting"></el-button>
 					<el-dropdown-menu slot="dropdown">
-						<el-dropdown-item @click="chakan">查看</el-dropdown-item>
+                        <el-badge :value="currentPage" :max="99"  class="item"><el-dropdown-item @click="chakan">新消息</el-dropdown-item></el-badge>
+
 						<el-dropdown-item @click="addstudentForm=true">新增</el-dropdown-item>
 						<el-dropdown-item>删除</el-dropdown-item>
 					</el-dropdown-menu>
 				</el-dropdown>
-				<el-table stripe :data="tableData" border style="width: 100%;">
+				<el-table hid-on-dingle-page stripe
+                          :data="tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)" border
+                          style="width: 100%;"
+                          default-sort="{prop: 'name',order:'descending'}" >
 					<el-table-column prop="name" label="姓名" min-width= 10% >
-
 					</el-table-column>
 					<el-table-column prop="date" label="日期" min-width= 10%>
 					</el-table-column>
 					<el-table-column prop="address" label="地址" min-width= 30%>
 					</el-table-column>
-					<el-table-column label="操作" min-width="7%" >
+					<el-table-column label="操作" min-width="6%" >
 						<template scope="scope" >
 							<el-button type="primary" size="small" @click="studentEdit(scope.$index, scope.row)">编辑</el-button>
 							<el-button type="danger" size="small" @click="studentDelete(scope.row)">删除</el-button>
 						</template>
 					</el-table-column>
 			</el-table>
+                <el-pagination
+                        @size-change="size_change"
+                        @current-change="current_change"
+                        @table-pagination-change="getTablePagination"
+                        :page-size="pagesize"
+                        :page-sizes="pagesizes"
+                        :total = "total"
+                        background
+                        layout="total, sizes, prev, pager, next, jumper">
+                </el-pagination>
 			</el-main>
 		</el-container>
 	</el-container>
 
 </template>
-<el-dialog title="新增信息" :visible.sync="addstudentForm" size="tiny" :modal-append-to-bady='false' @close='closeDialog'>
-	<el-form id="#addsForm" ref="addsForm" :model="addsForm" label-width="80px">
-		<el-form-item label="姓名" prop="name">
-			<el-input v-model="addsForm.name"></el-input>
-		</el-form-item>
-		<el-form-item label="日期" prop="date">
-			<el-input v-model="addsForm.date"></el-input>
-		</el-form-item>
-		<el-form-item label="地址" prop="address">
-			<el-input v-model="addsForm.address"></el-input>
-		</el-form-item>
 
-		<el-form-item>
-			<el-button type="primary" @click="studentAdd()">确定</el-button>
-			<el-button @click="addstudentForm = false;canceladdT('formt')">取消</el-button>
-		</el-form-item>
-	</el-form>
+<el-dialog title="新增信息" :visible.sync="addstudentForm" size="tiny" :modal-append-to-bady='false' @close='closeDialog'>
+    <el-form id="#addsForm" ref="addsForm" :model="addsForm" label-width="80px">
+        <el-form-item label="姓名" prop="name">
+            <el-input v-model="addsForm.name"></el-input>
+        </el-form-item>
+        <el-form-item label="日期" prop="date">
+            <el-input v-model="addsForm.date"></el-input>
+        </el-form-item>
+        <el-form-item label="地址" prop="address">
+            <el-input v-model="addsForm.address"></el-input>
+        </el-form-item>
+
+        <el-form-item>
+            <el-button type="primary" @click="studentAdd()">确定</el-button>
+            <el-button @click="addstudentForm = false;canceladdT('formt')">取消</el-button>
+        </el-form-item>
+    </el-form>
 </el-dialog>
 <el-dialog title="编辑信息" :visible.sync="editstudentForm" size="tiny" :modal-append-to-bady='false' @close='closeDialog'>
-	<el-form id="#editsForm" ref="editsForm" :model="editsForm" label-width="80px">
-		<el-form-item label="姓名" prop="name">
-			<el-input v-model="editsForm.name"></el-input>
-		</el-form-item>
-		<el-form-item label="日期" prop="date">
-			<el-input v-model="editsForm.date"></el-input>
-		</el-form-item>
-		<el-form-item label="地址" prop="address">
-			<el-input v-model="editsForm.address"></el-input>
-		</el-form-item>
+    <el-form id="#editsForm" ref="editsForm" :model="editsForm" label-width="80px">
+        <el-form-item label="姓名" prop="name">
+            <el-input v-model="editsForm.name"></el-input>
+        </el-form-item>
+        <el-form-item label="日期" prop="date">
+            <el-input v-model="editsForm.date"></el-input>
+        </el-form-item>
+        <el-form-item label="地址" prop="address">
+            <el-input v-model="editsForm.address"></el-input>
+        </el-form-item>
 
-		<el-form-item>
-			<el-button type="primary" @click="studentEdit()">确定</el-button>
-			<el-button @click="editstudentForm = false;canceladdT('formt')">取消</el-button>
-		</el-form-item>
-	</el-form>
+        <el-form-item>
+            <el-button type="primary" @click="studentEdit()">确定</el-button>
+            <el-button @click="editstudentForm = false;canceladdT('formt')">取消</el-button>
+        </el-form-item>
+    </el-form>
 </el-dialog>
+
 
 <script>
     import { mapState } from 'vuex'
     export default {
+        props:{
+            resetPageSize:{
+                type:Boolean,
+                default : false
+            },
+            dataTotal:{
+                type : [String, Number],
+                default:0
+            },
+            tableBegin: {
+                type : Array,
+                default(){
+                    return []
+                }
+            },
+            pageSizes:{
+                type :Array,
+                default(){
+                    return [2,4,9,15]
+                }
+            }
+
+        },
+
         name:"home",
         data(){
             return {
+                total : 100,
+                pagesize : 9,
+                pagesizes :[2,4,9,15],
+                currentPage : 1,
+                istag : true,
+                input:"",
+                input21 : "",
+
                 tableData:[{
                     date: '2020/5/14',
-					name :'小明',
-					address :'浦东新区'
-				}],
-                studentData:[],
+					name :'dd小sdfg明2',
+					address :'52345浦东123123新区'
+				},{
+                    date: '2020/5/14',
+                    name :'ff小明233',
+                    address :'22浦342东123新区'
+                },{
+                    date: '2020/5/14',
+                    name :'asdf小明124',
+                    address :'浦东123新区'
+                },{
+                    date: '2020/5/14',
+                    name :'asdf小明134',
+                    address :'浦东12312414新区'
+                },{
+                    date: '2020/5/14',
+                    name :'小dsfg明33',
+                    address :'浦东2314新区'
+                },{
+                    date: '2020/5/14',
+                    name :'w2小明44',
+                    address :'1324浦东新区'
+                },{
+                    date: '2020/5/14',
+                    name :'324小明',
+                    address :'浦314东新区'
+                },{
+                    date: '2020/5/14',
+                    name :'adf小f明f55',
+                    address :'23142345浦东新区'
+                },{
+                    date: '2020/5/14',
+                    name :'asdf小sdfg明125',
+                    address :'555浦东新区'
+                },{
+                    date: '2020/5/14',
+                    name :'ff小sdfg明15',
+                    address :'浦3215东新sfdg区'
+                },{
+                    date: '2020/5/14',
+                    name :'ad小明214525',
+                    address :'1235浦东sfg新区'
+                },{
+                    date: '2020/5/14',
+                    name :'sd小明2555',
+                    address :'sdsddd浦sd东sfg新区'
+                },{
+                    date: '2020/5/14',
+                    name :'adcv小明3415',
+                    address :'浦sfdg东新sdfg区'
+                },{
+                    date: '2020/5/14',
+                    name :'cvr小明1345',
+                    address :'浦sfg东sfdg新sfdg区'
+                },{
+                    date: '2020/5/14',
+                    name :'asdf小明1345',
+                    address :'浦gsfdgsf东sfg新区'
+                },{
+                    date: '2020/5/14',
+                    name :'4ff小明145',
+                    address :'浦ggg东dfsgs新区'
+                },{
+                    date: '2020/5/14',
+                    name :'f34f2小明dsfg',
+                    address :'浦sfdgsdfg东新区'
+                },{
+                    date: '2020/5/14',
+                    name :'ff小明sfdg',
+                    address :'浦东新sfdgsdf区'
+                },],
+
+
 				addstudentForm: false,
 				editstudentForm:false,
-				page:{
-                    pageSize : 10,
-					totalRecords : 0,
-					totalPages : 0,
-					pageNum : 0
-				},
+				// page:{
+                 //    pageSize : 10,
+				// 	totalRecords : 0,
+				// 	totalPages : 0,
+				// 	pageNum : 0
+				// },
+
                 dateinput : '',
                 searchinput:'',
-			}
-		},
-        computed: mapState({ user: state => state.user }),
-		methods:{
 
+			};
+		},
+
+
+
+        computed: mapState({ user: state => state.user }),
+
+        watch :{
+            tableBegin:{
+                immediate : true,
+                handler(){
+                    this.resetSize()
+                    this.updataData()
+                }
+            },
+
+            resetPageSize:{
+                immediate:false,
+                handler(){
+                    this.resetSize()
+                }
+            },
+        },
+
+		methods:{
+            tableRowClassName({row,rowIndex}){
+                if(rowIndex === 0){
+                    return 'th';
+                }
+                return'';
+            },
+            switchChange(){
+                this.istag = !this.istag ;
+            },
+            current_change:function(currentPage){
+              this.currentPage = currentPage;
+            },
+            size_change(){
+                this.resetSize()
+                this.pagesize = val
+                this.updateData()
+            },
+            updataData(){
+                const begin = (this.currentPage - 1) * this.pageSize
+                const end = this.currentPage * this.pagesize
+                const tableData = this.tableBegin.slice(begin, end)
+
+            },
 
 			colseDialog(){
                 this.addstudentForm=false;
@@ -194,7 +359,6 @@
 			addStudent(){
                 this.addstudentForm = true;
 			},
-
             studentAdd(){
                 let studentList=this.addsForm;
                 let {name,date,address} = studentList;
@@ -215,7 +379,6 @@
                     });
                 }
             },
-
             studentDelete(user){
                 this.$confirm('此操作将永久删除信息 ' + user.name + ', 是否继续?', '提示', { type: 'warning' })
                     .then(() => { // 向服务端请求删除
@@ -230,8 +393,22 @@
             },
 
 		},
-		mounted(){
 
-		}
-    }
+
+		mounted(){
+		},
+
+		created:function () {
+            this.total = this.tableData.length;
+        },
+
+
+        getTablePagination(data, currentpage, pagesize){
+            this.tableData = data
+            this.currentPage = currentpage
+            this.pagesize = pagesize
+        },
+
+
+    };
 </script>
