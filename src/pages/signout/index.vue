@@ -55,11 +55,11 @@
 
 		<div align="center" class="fond">
 			<div style="width:1000px;">
-				<div class="style_prevu_kit" style="background-color:#cb2025;"></div>
-				<div class="style_prevu_kit" style="background-color:#f8b334;"></div>
-				<div class="style_prevu_kit" style="background-color:#97bf0d;"></div>
-				<div class="style_prevu_kit" style="background-color:#00a096;"></div>
-				<div class="style_prevu_kit" style="background-color:#93a6a8;"></div>
+				<div class="style_prevu_kit" style="background-color:#4bbfcb;"></div>
+				<div class="style_prevu_kit" style="background-color:#42a8b3;"></div>
+				<div class="style_prevu_kit" style="background-color:#33bfab;"></div>
+				<div class="style_prevu_kit" style="background-color:#26a076;"></div>
+				<div class="style_prevu_kit" style="background-color:#23a844;"></div>
 				<div class="btn">
 					<el-button v-on:click="submit" @click="openMessageBox">exit</el-button>
 				</div>
