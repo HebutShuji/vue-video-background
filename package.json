@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node server",
     "dev:dist": "cross-env NODE_ENV=production gulp devDist",
-    "dev:test": "gulp devTest"
+    "dev:test": "gulp devTest",
+    "start" : "npm run dev"
   },
   "author": "",
   "license": "ISC",

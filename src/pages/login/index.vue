@@ -115,6 +115,7 @@
 </template>
 
 
+
 <style  scoped>
 	.video{
 	width: 100%;
