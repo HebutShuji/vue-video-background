@@ -55,7 +55,7 @@
 
 		<div align="center" class="fond">
 			<div style="width:1000px;">
-				<div class="style_prevu_kit" style="background-color:#4bbfcb;"></div>
+				<div class="style_prevu_kit" style="background-color:#4bbfcb;" @click="openMessageBox">exit</div>
 				<div class="style_prevu_kit" style="background-color:#42a8b3;"></div>
 				<div class="style_prevu_kit" style="background-color:#33bfab;"></div>
 				<div class="style_prevu_kit" style="background-color:#26a076;"></div>
