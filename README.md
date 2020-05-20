@@ -6,3 +6,5 @@ npm install
 npm install element-ui --save
 ## run
 npm run dev
+
+####目前只有一个分支 欢迎大火添加
