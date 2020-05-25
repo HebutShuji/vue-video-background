@@ -113,6 +113,9 @@
 	</div>
 	</body>
 </template>
+<div>
+	<canvas id="live2dcanvas" width="200" height="400" style="position: fixed; opacity: 0.9; right: 0px; bottom: -20px; z-index: 99999; pointer-events: none;"></canvas>
+</div>
 
 
 
