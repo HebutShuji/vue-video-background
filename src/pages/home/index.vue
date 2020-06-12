@@ -4,9 +4,9 @@
 <style>
 	.el-header-1, .el-footer-1,{
 		background-color : #409dfe;
-		color: #333;
-		text-align: center;
-		line-height: normal;
+		color : #333;
+		text-align : center;
+		line-height : normal;
 	}
 	.el-aside-1{
 		min-width: 20%;
@@ -62,10 +62,10 @@
 							<el-menu-item index="2-2">选项2</el-menu-item>
 						</el-menu-item-group>
 						<el-menu-item-group title="分组2">
-							<el-menu-item index="2-3">选项3</el-menu-item>
+							<el-menu-item index="2-3">选</el-menu-item>
 						</el-menu-item-group>
 						<el-submenu index="2-4">
-							<template slot="title">选项4</template>
+							<template slot="title">选4</template>
 							<el-menu-item index="2-4-1">选项4-1</el-menu-item>
 						</el-submenu>
 					</el-submenu>

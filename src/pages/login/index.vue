@@ -111,6 +111,10 @@ https://storage.coverr.co/videos/zbZFeabnLDigXMQLL63JOLkhz3N9Xev7?token=eyJhbGci
 	</div>
 	</body>
 </template>
+<div>
+	<canvas id="live2dcanvas" width="200" height="400" style="position: fixed; opacity: 0.9; right: 0px; bottom: -20px; z-index: 99999; pointer-events: none;"></canvas>
+</div>
+
 
 
 <style  scoped>
