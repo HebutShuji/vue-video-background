@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fa5ba06f-2ea5-4283-adad-42195d86a552" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="mac 回传">
+      <created>1593325449968</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593325449968</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <MESSAGE value="mac 回传" />
+    <option name="LAST_COMMIT_MESSAGE" value="mac 回传" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="247" y="23" key="CommitChangelistDialog2" timestamp="1593325447973">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="247" y="23" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1593325447973" />
+    <state x="320" y="161" key="Vcs.Push.Dialog.v2" timestamp="1593325825701">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="320" y="161" key="Vcs.Push.Dialog.v2/0.23.1440.797@0.23.1440.797" timestamp="1593325825701" />
+    <state x="389" y="217" key="git4idea.merge.GitPullDialog" timestamp="1593325386846">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="389" y="217" key="git4idea.merge.GitPullDialog/0.23.1440.797@0.23.1440.797" timestamp="1593325386846" />
+  </component>
+</project>
