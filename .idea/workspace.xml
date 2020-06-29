@@ -27,20 +27,51 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/HebutShuji/vue-video-background.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dDDyFO2Ycv7mQ2WIp8U3RMwP9K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="mac 回传">
-      <created>1593325449968</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1593325449968</updated>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa5ba06f-2ea5-4283-adad-42195d86a552" name="Default Changelist" comment="" />
+      <created>1591951023153</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591951023153</updated>
+      <workItem from="1591951027486" duration="113000" />
+      <workItem from="1591951168979" duration="368000" />
+      <workItem from="1591951573532" duration="717000" />
+      <workItem from="1591952316553" duration="838000" />
     </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -54,23 +85,38 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="test" />
-    <MESSAGE value="mac 回传" />
-    <option name="LAST_COMMIT_MESSAGE" value="mac 回传" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="247" y="23" key="CommitChangelistDialog2" timestamp="1593325447973">
+    <state x="320" y="98" key="#Plugins" timestamp="1591952291979">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="98" key="#Plugins/0.0.1440.900@0.0.1440.900" timestamp="1591952291979" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1591952639415">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591952639415" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1591952639413">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591952639413" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1591952639411">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591952639411" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1591952639414">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591952639414" />
+    <state x="208" y="31" key="SettingsEditor" timestamp="1591951878176">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1591951878176" />
+    <state x="320" y="161" key="Vcs.Push.Dialog.v2" timestamp="1591953173822">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state x="247" y="23" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1593325447973" />
-    <state x="320" y="161" key="Vcs.Push.Dialog.v2" timestamp="1593325825701">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state x="320" y="161" key="Vcs.Push.Dialog.v2/0.23.1440.797@0.23.1440.797" timestamp="1591953173822" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1591952228361">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="161" key="Vcs.Push.Dialog.v2/0.23.1440.797@0.23.1440.797" timestamp="1593325825701" />
-    <state x="389" y="217" key="git4idea.merge.GitPullDialog" timestamp="1593325386846">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state x="389" y="217" key="git4idea.merge.GitPullDialog/0.23.1440.797@0.23.1440.797" timestamp="1593325386846" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1591952228361" />
   </component>
 </project>
