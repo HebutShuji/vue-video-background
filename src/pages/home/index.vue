@@ -2,11 +2,11 @@
 
 </style>
 <style>
-	.el-header-1, .el-footer-1,{
+	.el-header-1, .el-footer-1{
 		background-color : #409dfe;
-		color : #333;
-		text-align : center;
-		line-height : normal;
+		color: #333;
+		text-align: center;
+		line-height: normal;
 	}
 	.el-aside-1{
 		min-width: 20%;
